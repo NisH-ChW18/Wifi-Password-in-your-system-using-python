@@ -14,3 +14,4 @@ password = [b.split(":")[1][1:-1] for b in password if "Key Content" in b]
     print("{:<30}|  {:<}".format('i', password[0]))
     expect IndexError:
     print("{:<30}| {:<}".format('i', ""))
+print ("Thanks")
