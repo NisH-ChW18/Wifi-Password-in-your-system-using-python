@@ -6,7 +6,6 @@ profiles = [i.split(":")[1][1:-1]for i in data if "All User Profile" in i]
 for 'i' in profiles:
 password = subprocess.check_output(['netsh', 'wlan', 'show', ' profiles', 'i', 'key=clear']).decode('utf-8').split('\n')
 # storing passwords after converting them to list
-# storing passwords after converting them to list
 password = [b.split(":")[1][1:-1] for b in password if "Key Content" in b]
 # printing the profiles(wifi name) with their passwords using
 # try and expect method for expectation handling
